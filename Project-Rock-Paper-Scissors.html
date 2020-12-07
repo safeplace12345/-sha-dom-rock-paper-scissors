@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            text-align: center;
+            padding: 5px;
+            font-family: 'Pacifico', cursive;
+        }
+        h1,h3{
+        font-size: 1.9rem;
+        color: gainsboro;
+        }
+        div{
+            border: 2px solid rebeccapurple;
+            border-radius: 5px;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            /* background-color: rosybrown; */
+            background-image:
+            url("https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhc2lubyUyMGdhbWVzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        }
+        .layout{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .player,.computer,.counter,.layout{
+            color: white;
+            background-color: black;
+            font-size: 1.9rem;
+        }
+        input{
+            padding: 5px 20px;
+            font-size: 2rem;
+            background-color: gold;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        input:hover{
+            box-shadow: 2px 2px honeydew;
+            transform: scaleX(1.2);
+        }
+        input:visited{
+            border: 1px maroon;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Rock-Scissors-Paper</h1>
+    <div class="layout">
+        <input type="button" value="Scissors" id="scissors" class="btn">
+        <input type="button" value="Paper" id="paper" class="btn">
+        <input type="button" value="Rock" id="rock" class="btn
+        ">
+    </div>
+    <div class="result">Score Board</div>
+    <div class="counter">0
+    </div>
+    <h3>Player Board</h3>
+    <div id="player" class=" player">0</div>
+    <h3>Computer Board</h3>
+    <div id="computer" class="computer">0</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
