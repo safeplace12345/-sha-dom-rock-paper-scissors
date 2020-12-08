@@ -8,71 +8,96 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
-        *{
+        * {
             box-sizing: border-box;
             text-align: center;
             padding: 5px;
             font-family: 'Pacifico', cursive;
         }
-        h1,h3{
-        font-size: 1.9rem;
-        color: gainsboro;
+
+        h1,
+        h3,
+        .result {
+            font-size: 1.9rem;
+            color: black;
+            background-color: #ca770096;
         }
-        div{
+
+        div {
             border: 2px solid rebeccapurple;
             border-radius: 5px;
         }
-        body{
+
+        body {
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            /* background-color: rosybrown; */
             background-image:
-            url("https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhc2lubyUyMGdhbWVzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+                url("https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhc2lubyUyMGdhbWVzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+            background-size: cover;
         }
-        .layout{
+
+        .layout {
             margin-top: 40px;
             display: flex;
             justify-content: space-around;
+            /* max-width: 800px; */
         }
-        .player,.computer,.counter,.layout{
+
+        .max_width {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .player,
+        .computer,
+        .counter,
+        .layout {
             color: white;
             background-color: black;
             font-size: 1.9rem;
         }
-        input{
+
+        input,.reset {
             padding: 5px 20px;
             font-size: 2rem;
-            background-color: gold;
+            background-color: #d1bd01;;
             border-radius: 5px;
             margin: 5px;
         }
-        input:hover{
+
+        input:hover {
             box-shadow: 2px 2px honeydew;
             transform: scaleX(1.2);
         }
-        input:visited{
+
+        input:visited {
             border: 1px maroon;
         }
-
+        .reset{
+            margin-top: 108px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Rock-Scissors-Paper</h1>
-    <div class="layout">
-        <input type="button" value="Scissors" id="scissors" class="btn">
-        <input type="button" value="Paper" id="paper" class="btn">
-        <input type="button" value="Rock" id="rock" class="btn
+    <section class="max_width">
+        <!-- <form id=form>  -->
+        <h1>Rock-Scissors-Paper</h1>
+        <div class="layout">
+            <input type="button" value="Scissors" id="scissors" class="btn">
+            <input type="button" value="Paper" id="paper" class="btn">
+            <input type="button" value="Rock" id="rock" class="btn
         ">
-    </div>
-    <div class="result">Score Board</div>
-    <div class="counter">0
-    </div>
-    <h3>Player Board</h3>
-    <div id="player" class=" player">0</div>
-    <h3>Computer Board</h3>
-    <div id="computer" class="computer">0</div>
+        </div>
+        <div class="result">Score Board</div>
+        <div class="counter">0
+        </div>
+        <h3>Player Board</h3>
+        <div id="player" class=" player">0</div>
+        <h3>Computer Board</h3>
+        <div id="computer" class="computer">0</div>
+        <button class="reset" >Reset</button>
+        
+    </section>
     <script src="script.js"></script>
 </body>
 

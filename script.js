@@ -23,8 +23,29 @@
  function increment_comScore() {
      comScore += 1;
  }
+//   define  a function reset game(){
+    // reset count,comscore,playerScore
+    // update the dom with new data
+// }
+// Add a reset button
+// form.reset(id)
+
+function resetGame(){
+    count = 0;
+    playerScore = 0;
+    comScore = 0;
+    document.querySelector('.counter').innerText = count;
+    document.querySelector('.player').innerText = playerScore;
+    document.querySelector('.computer').innerText = comScore;
+}
+document.querySelector('.reset').addEventListener('click',resetGame)
 
  function playRound(p_Selection, com_Selection) {
+    //  check if the score is 10 and reset counter and score 
+
+    if(count === 10){
+        return;
+    }
      let choice = p_Selection.toLowerCase();
      let message = '';
 
@@ -43,7 +64,8 @@
      }
 
      if (p_Selection.toLowerCase() === com_Selection) {
-        print_player_Score();
+        // print_player_Score();
+        document.querySelector('.result').innerText =`Hmm give it another shot!`
      } else if (choice === 'rock' && com_Selection === 'paper') {
          print_com_Score();
      } else if (choice === 'paper' && com_Selection === 'rock') {
@@ -97,6 +119,7 @@
      //      increment_count()
      //      document.querySelector('.counter').innerText = count;
  }
+
  const btn = document.querySelectorAll('.btn')
  btn.forEach(button => button.addEventListener('click', function (element) {
      console.log(element.target.value)
